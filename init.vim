@@ -20,7 +20,6 @@ Plug 'Valloric/MatchTagAlways'                                    " highlights h
 Plug 'Twinside/vim-hoogle'                                        " Hoogle search (Haskell) in Vim
 Plug 'Shougo/unite.vim'                                           " Required by some haskell plugins
 Plug 'ujihisa/unite-haskellimport'                                " Suggestions on imports
-Plug 'vmchale/dhall-vim'                                          " Syntax highlighting for Dhall lang
 Plug 'terryma/vim-multiple-cursors'                               " Multiple cursors selection, etc
 Plug 'neoclide/coc.nvim', {'do': { -> coc#util#install()}}        " LSP client + autocompletion plugin
 Plug 'itchyny/lightline.vim'                                      " configurable status line (can be used by coc)
@@ -128,7 +127,7 @@ set backspace=2
 colorscheme dracula
 " colorscheme torte
 syntax on
-set shell=/bin/bash
+set shell=/bin/zsh
 set laststatus=2
 set noshowmode
 
@@ -194,9 +193,9 @@ augroup END
 nnoremap <C-p> :FZF<CR>
 
 " Disable touchpad on startup / Enable it back on exit (at the OS level)
-"autocmd VimEnter * !~/development/touchpad-off.sh
-"autocmd VimLeave * !~/development/touchpad-on.sh
-nnoremap <silent> <F3> :!~/development/touchpad-toggle.sh <enter><CR>
+"autocmd VimEnter * !~/.config/nvim/scripts/touchpad-off.sh
+"autocmd VimLeave * !~/.config/nvim/scripts/touchpad-on.sh
+nnoremap <silent> <F3> :!~/.config/nvim/scripts/touchpad-toggle.sh <enter><CR>
 
 " Disable arrow keys and page up / down
 noremap <Up> <nop>
