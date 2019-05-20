@@ -33,6 +33,9 @@ call plug#end()
 " End of plugins here
 " ===================
 
+"Start up buffer
+autocmd VimEnter * view ~/.config/nvim/keybindings.md
+
 " airline: status bar at the bottom
 let g:airline_powerline_fonts=1
 
@@ -121,6 +124,12 @@ nmap ga <Plug>(EasyAlign)
 map <C-F> :NERDTreeToggle<CR>
 map <C-S> :NERDTreeFind<CR>
 
+" Open Nerdtree when nvim starts with no file opened
+autocmd StdinReadPre * let s:std_in=1
+autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
+" Close Nerdtree when it is  the last window opened
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+
 " Other options
 let mapleader=','
 set backspace=2
@@ -144,7 +153,7 @@ let g:NERDTreeDirArrowCollapsible = '▾'
 
 let g:NERDTreeMinimalUI = 1
 let g:NERDTreeDirArrows = 1
-
+let g:NERDTreeShowHidden = 1
                             " General editor options
 set hidden                  " Hide files when leaving them.
 set number                  " Show line numbers.
