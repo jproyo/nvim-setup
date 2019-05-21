@@ -34,7 +34,7 @@ call plug#end()
 " ===================
 
 "Start up buffer
-autocmd VimEnter * view ~/.config/nvim/keybindings.md
+"autocmd VimEnter * edit ~/.config/nvim/keybindings.md
 
 " airline: status bar at the bottom
 let g:airline_powerline_fonts=1

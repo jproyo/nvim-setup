@@ -16,6 +16,41 @@ You must add them at `.config/nvim/snippets/`.
 
 ### [vim-fugitive](https://github.com/tpope/vim-fugitive)
 
+:Git command        Raw commands
+:Gwrite                :Git add %
+:Gread                 :Git checkout %
+:Gremove               :Git rm %
+:Gmove [relative/abs]  :Git mv from to
+:Gcommit
+:Gblame
+:Gdiff (:Gvdiff)
+  :Gwrite (at index file) == :Gread (working copy)
+  :Gread (at index file) == :Gwrie(working copy)
+  :diffget chunk    index -> working
+  :diffput chunk    working -> index
+     You can save the index file => will only stage the modified patches
+     Check it out with $git diff --cached
+  :diffupdate (to update buffer)
+  :do                      :diffget
+  :dp                      :diffput
+  :.diffget                only current line
+  [visual] :'<,'>diffget   only some lines
+
+Merging:
+  After `git merge branch` conflict may arise.
+  open the conflict file and then :Gvdiff
+  Left (target = our branch), middle (working copy), right (merge branch)
+  :diffget buffer (from the middle) (:ls for buffer, look for //2, //3
+  :diffput buffer (from left or right)
+  Then :on, :w, :Gstatus, stage merged files, cc (commit conflicts)
+  :Gwrite! from left or right if you want to discard the other file.
+
+:Gstatus (press g? to show help)
+  <C-n>, <C-n>          to navigate
+  -                     to stage/unstage
+  X                     discard changes
+  =                     inline diff
+  dd (dv)               diff on file
 
 ### [fuzzy-finder](https://github.com/junegunn/fzf/blob/master/README-VIM.md)
 <C-p> fuzzy find current directory. Same as :FZF
@@ -36,6 +71,21 @@ You must add them at `.config/nvim/snippets/`.
 <leader>cc        comment line
 <leader>c$        cursor to the end
 <leader>cA        comment end of line and insert
+
+### [vim-easy-align](https://github.com/junegunn/vim-easy-align)
+[Visual] ga<character_to_align>
+gaip=
+    2=  around the 2n occurrences
+    *=  around all occurrences
+    <Enter>  Switching between left/right/center alignment
+<space>
+,
+Regular expression
+
+Lorem ipsum
+dolor   sit
+met  foo  foo
+
 
 ### [vim-hoogle](https://github.com/Twinside/vim-hoogle)
 
@@ -90,3 +140,19 @@ o / O: new line after cursor / new line before cursor.
 
 ### Move line up
 ddkP
+
+### Split screens
+<C-w> v     vertical split
+<C-w> S     horizontal split
+<C-w> q     close window
+:on         close all except this
+
+### Files
+:w filename.txt           Write current content to file
+:new filename.txt         Open new buffer with the given name.
+
+### Miscellaneous
+[Normal] :x           delete
+<f char>  ; (next ocurrence)
+          , (previous)
+
