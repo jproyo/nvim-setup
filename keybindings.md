@@ -24,6 +24,7 @@ You must add them at `.config/nvim/snippets/`.
 :Gcommit
 :Gblame
 :Gdiff (:Gvdiff)
+  Left (index file) Right (working copy)
   :Gwrite (at index file) == :Gread (working copy)
   :Gread (at index file) == :Gwrie(working copy)
   :diffget chunk    index -> working
@@ -51,6 +52,25 @@ Merging:
   X                     discard changes
   =                     inline diff
   dd (dv)               diff on file
+
+:Glog  n [--reverse] (current file)
+Load in the buffer all previous revisions
+:cnext (<-) :cprevious (->)
+:Gedit  go back
+
+:Glog -- path [% current]
+:Glog --
+  Then :copen
+  use hjkl to move and enter to see the commit
+:Glog --grep=.. -- <!-- show commit where message includes-->
+
+:Ggrep word
+:copen
+
+:Ggrep 'word' branchName/hash <!--Opens read only buffer-->
+
+<!--Search for a word added or deleted-->
+:Glog -S... --
 
 ### [fuzzy-finder](https://github.com/junegunn/fzf/blob/master/README-VIM.md)
 <C-p> fuzzy find current directory. Same as :FZF
@@ -82,20 +102,41 @@ gaip=
 ,
 Regular expression
 
-Lorem ipsum
-dolor   sit
-met  foo  foo
-
-
 ### [vim-hoogle](https://github.com/Twinside/vim-hoogle)
 
 :Hoogle            current word
 :Hoogle <search>
 
 ### [multi-cursor](https://github.com/terryma/vim-multiple-cursors)
-todo
+<C-n> on a word and then
+  <C-n> select
+  <C-x> skip
+  <C-p> previous
+  Then you can just use A, I, delete word and insert: c or s
+
+<M-n> select all occurences
+<ESC> back to regular
 
 ## Basic commands
+
+### Coc
+
+gd            goto definition
+<leader>ac    codeAction on current line
+F             format
+K             show documentation
+<leader>rn    rename
+<space>a      diagnostic
+<space>o      outline symbol curent document
+<space>s      search symbol workspace
+<space>j      default action next item
+<space>k      default action previous item
+<space>p      latest coc list
+<leader><ESC> close preview (signature help)
+<M-B>         metals build import
+<C-j>         snippet next placeholder
+<C-k>         snippet previous placeholder
+;h            haskel import
 
 ### Switching
 <M-h>

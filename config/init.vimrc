@@ -20,9 +20,9 @@ Plug 'terryma/vim-multiple-cursors'                               " Multiple cur
 Plug 'neoclide/coc.nvim', {'do': { -> coc#util#install()}}        " LSP client + autocompletion plugin
 Plug 'itchyny/lightline.vim'                                      " configurable status line (can be used by coc)
 Plug 'derekwyatt/vim-scala'                                       " scala plugin
-" Plug 'easymotion/vim-easymotion'
-" Plug 'tpope/vim-repeat'
-" Plug 'Xuyuanp/nerdtree-git-plugin'                              " Shows files git status on the NerdTree
-
+                                                                  " Plug 'easymotion/vim-easymotion'
+                                                                  " Plug 'tpope/vim-repeat'
+Plug 'Xuyuanp/nerdtree-git-plugin'                                " Shows files git status on the NerdTree
+Plug 'airblade/vim-gitgutter'                                     " Show file git status
 call plug#end()
 

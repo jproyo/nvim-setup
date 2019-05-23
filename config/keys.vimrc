@@ -55,6 +55,7 @@ inoremap <C-ScrollWheelLeft> <nop>
 inoremap <ScrollWheelRight> <nop>
 inoremap <S-ScrollWheelRight> <nop>
 inoremap <C-ScrollWheelRight> <nop>
+
 " Clear search highlighting
 nnoremap <C-z> :nohlsearch<CR>
 
@@ -112,6 +113,9 @@ nmap <leader>ac <Plug>(coc-codeaction)
 " Remap for do action format
 "nmap <silent> F <Plug>(coc-action-format) "does not work
 nnoremap <silent> F :call CocAction('format')<CR>
+
+" Show signature help
+autocmd User CocJumpPlaceholder call CocActionAsync('showSignatureHelp')
 
 " Use K for show documentation in preview window
 nnoremap <silent> K :call <SID>show_documentation()<CR>

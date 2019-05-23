@@ -38,6 +38,8 @@ let g:NERDTreeMinimalUI = 1
 let g:NERDTreeDirArrows = 1
 let g:NERDTreeShowHidden = 1
 
+let g:NERDTreeShowGitStatus = 1
+
 " vim-scala
 au BufRead,BufNewFile *.sbt set filetype=scala
 
