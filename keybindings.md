@@ -7,6 +7,7 @@ cs"'  replace surrouding " for '
 ds"   remove surrounding "
 yss"  add surrounding "
 ysiw" add surround " on current word/object
+[visual] S
 
 ### [Snippets](https://github.com/neoclide/coc-snippets)
 You must add them at `.config/nvim/snippets/`.
@@ -117,6 +118,9 @@ Regular expression
 <M-n> select all occurences
 <ESC> back to regular
 
+[Visual] Select lines and then <C-n> to add a curson on each line
+         Then, for example, you can move to the end of line A
+
 ## Basic commands
 
 ### Coc
@@ -166,18 +170,16 @@ In Normal mode:
  P: paste before cursor
 
 Press v, move to select, press d/y and then p to paste
-
-Using motion: y/d{motion}
- - yy: line
- - y$: line no trailing-space
- - yiw – yank the current word (excluding surrounding whitespace)
-
-### Start / End of line
-^ / $: start of line / end of line
-A / I: append end of line / insert start of line
+      o  to change selection direction
+Press V, for visual whole liness
+Pres <C-v> for block selecting.
+   e.g. delete the middle column of a table <c-v>, 3j, w, h and d
 
 ### New line
 o / O: new line after cursor / new line before cursor.
+
+### Back and forth files/locations
+<C-o> and <C-i>:  jump back and forth between recent points in files
 
 ### Move line up
 ddkP
@@ -192,8 +194,82 @@ ddkP
 :w filename.txt           Write current content to file
 :new filename.txt         Open new buffer with the given name.
 
-### Miscellaneous
-[Normal] :x           delete
-<f char>  ; (next ocurrence)
-          , (previous)
+### Open link
+gx       on browser
+gf       open link on file
+
+### Search
+<f char>      ; (next ocurrence)
+              , (previous)
+<F char>      backwards
+/             n and N
+   You can use regex:
+      /^the  /the$    /t.e
+? (backwards) n and N
+*             * and #
+<C-z>         clear search highlight
+
+### Substitute
+:s/old/new/g   line
+:%s/old/new/g  file
+:%s/old/new/gc file + propt
+
+### Marks
+m[a..z]    mark a line
+'[a..z]    jump to   mark
+:marks     list marks
+
+### Motions
+N w   word forward        e.g. 2dd (delete two lines)
+N W   word forward with special characters
+      e.g. special-word special/word/yey
+      works for W, E, ...
+N aw  a word (whitespaces incluses)
+N iw  in word
+N e   until the end of this word
+N ge  until the end of this word (backwards)
+N b   word backwards
+N $   until end of line
+N )   sentence forward
+N (   sentence backward
+N }   paragraph forward
+^ 0 <HOME>  start of line
+$ <END>     end of line
+A / I: append end of line / insert start of line
+50G         Goto line 50
+%    matching (, [, {
+gg and G   star or end of file
+M          middle of document
+
+### Text objects
+
+### Scrolling
+<C-f>   forward screen
+<C-b>   backward screen
+<C-u>   down half a screen
+<C-d>   up half a screen
+<C-y>   down line
+<C-e>   up line
+zz      center line on screen
+
+### Help
+<F1> or :help
+
+# Delete, rename and change
+d           delete
+  df"       delete from cursor to "
+c           change
+  c2w..
+  cc
+r           rename (delete + <ESC>)
+R           to replace
+D           d$
+C           d$
+s           change char
+S           c$
+x           delete char
+X           delete char (backwards)
+
+# Miscelaneous
+:!command
 

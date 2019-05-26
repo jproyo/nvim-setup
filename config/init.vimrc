@@ -8,7 +8,8 @@ Plug 'junegunn/fzf.vim'                                           " fuzzy finder
 Plug 'scrooloose/nerdtree'                                        " folders tree
 Plug 'scrooloose/nerdcommenter'                                   " code commenter
 Plug 'dracula/vim'                                                " dark theme
-Plug 'kien/rainbow_parentheses.vim'                               " for nested parentheses
+"Plug 'kien/rainbow_parentheses.vim'                               " for nested parentheses
+Plug 'luochen1990/rainbow'                                        " Colored parentheses
 Plug 'tpope/vim-surround'                                         " quickly edit surroundings (brackets, html tags, etc)
 Plug 'junegunn/vim-easy-align'                                    " alignment plugin
 Plug 'neomake/neomake'                                            " run programs asynchronously and highlight errors
@@ -24,5 +25,7 @@ Plug 'derekwyatt/vim-scala'                                       " scala plugin
                                                                   " Plug 'tpope/vim-repeat'
 Plug 'Xuyuanp/nerdtree-git-plugin'                                " Shows files git status on the NerdTree
 Plug 'airblade/vim-gitgutter'                                     " Show file git status
+"Plug 'rhysd/vim-grammarous'                                       " Grammar checker
+
 call plug#end()
 

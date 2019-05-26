@@ -40,6 +40,9 @@ let g:NERDTreeShowHidden = 1
 
 let g:NERDTreeShowGitStatus = 1
 
+" Rainbow brackets
+let g:rainbow_active = 1
+
 " vim-scala
 au BufRead,BufNewFile *.sbt set filetype=scala
 
