@@ -197,6 +197,8 @@ ddkP
 ### Open link
 gx       on browser
 gf       open link on file
+         Only works for files in the 'path' (:set path += ...)
+         You can actually open this ftp.vim.org/pub/vim/README
 
 ### Search
 <f char>      ; (next ocurrence)
@@ -212,12 +214,17 @@ gf       open link on file
 ### Substitute
 :s/old/new/g   line
 :%s/old/new/g  file
-:%s/old/new/gc file + propt
+:%s/old/new/gc file + prompt (to confirm or skip)
 
 ### Marks
 m[a..z]    mark a line
 '[a..z]    jump to   mark
 :marks     list marks
+
+### Folding
+	zf	F-old creation
+	zo	O-pen a fold
+	zc	C-lose a fold
 
 ### Motions
 N w   word forward        e.g. 2dd (delete two lines)
@@ -239,9 +246,16 @@ A / I: append end of line / insert start of line
 50G         Goto line 50
 %    matching (, [, {
 gg and G   star or end of file
-M          middle of document
+M          middle of document (doesn't work)
 
+### Ranges
+:1,5s/this/that/g     replace from line 1 to 5
+:54s/this/that/g      replace in linne 54
+:.,$   from current to end
 ### Text objects
+
+### Shifting
+>> and <<
 
 ### Scrolling
 <C-f>   forward screen
@@ -270,6 +284,35 @@ S           c$
 x           delete char
 X           delete char (backwards)
 
-# Miscelaneous
-:!command
+### Recording
+qa .... q
+To apply the record @a (you can 3@a)
 
+### Session & views
+:mksession session_01.vim        make session (windows layout, history, etc)
+nvim -S session_01.vim           restore session
+
+###  Miscelaneous
+:!command
+vim -o one.txt two.txt       open all three files in split windows
+vim -d main.txt~ main.txt    show file diff
+:diffsp help.txt             Diff with backup file
+
+### Option window
+:options
+  Go th the options you want to change.
+  Go to the set and press <Enter> to change it
+  Options can be swaped using <Enter> others setting the value
+
+### End of line
+unix:  <LF> line feed
+apple: <CR> carriage return
+dos:   <CR><LF>
+Vim automatically recognizes the different file formats and handles things for you.
+
+### Formatting
+No formatting by default
+:set textwidth=30  # line break
+[visual] gq        # format paragraph
+gqap               # a paragraph
+gg gq G            # Format all text
