@@ -105,6 +105,7 @@ nmap <silent> ]c <Plug>(coc-diagnostic-next)
 nmap <silent> gd <Plug>(coc-definition)
 nmap <silent> gy <Plug>(coc-type-definition)
 nmap <silent> gi <Plug>(coc-implementation)
+" Search usage of the symbol
 nmap <silent> gr <Plug>(coc-references)
 
 " Remap for do codeAction of current line
@@ -146,8 +147,8 @@ nnoremap <silent> <space>p  :<C-u>CocListResume<CR>
 
 " close preview (shown for hover / signature help)
 nnoremap <leader> <Esc> :pclose<CR>
-
-nnoremap <silent> <M-B> :call CocRequest('scalametals', 'workspace/executeCommand', { 'command': 'build-import' })<CR>
+nnoremap <silent> <M-B> :call CocRequestAsync('metals', 'workspace/executeCommand', { 'command': 'build-import' })<CR>
+nnoremap <silent> <M-C> :call CocRequestAsync('metals', 'workspace/executeCommand', { 'command': 'build-connect' })<CR>
 "nnoremap <silent> <M-Z> :ccl<CR>
 
 " COC Snippets
@@ -169,4 +170,7 @@ imap <C-j> <Plug>(coc-snippets-expand-jump)
 " Haskell plugins
 nnoremap <silent> ;h :execute "Unite -start-insert haskellimport"<CR>
 "nnoremap <silent> <C-h> :execute "Unite hoogle"<CR> " too slow
+
+" Failed attempt
+"nnoremap <silent> B :command! l-nargs=1 "vimgrep <args> **/*.scala **/*.sc **/*.sbt"<CR>
 

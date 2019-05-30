@@ -25,7 +25,8 @@ Plug 'derekwyatt/vim-scala'                                       " scala plugin
                                                                   " Plug 'tpope/vim-repeat'
 Plug 'Xuyuanp/nerdtree-git-plugin'                                " Shows files git status on the NerdTree
 Plug 'airblade/vim-gitgutter'                                     " Show file git status
-"Plug 'rhysd/vim-grammarous'                                       " Grammar checker
+"Plug 'rhysd/vim-grammarous'                                      " Grammar checker
+"Plug 'mileszs/ack.vim'                                            "Search Tool
 
 call plug#end()
 

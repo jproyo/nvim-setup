@@ -125,7 +125,8 @@ Regular expression
 
 ### Coc
 
-gd            goto definition
+gd            adadgoto definition
+gr            adadgoto references
 <leader>ac    codeAction on current line
 F             format
 K             show documentation
@@ -138,6 +139,7 @@ K             show documentation
 <space>p      latest coc list
 <leader><ESC> close preview (signature help)
 <M-B>         metals build import
+<M-C>         metals connect
 <C-j>         snippet next placeholder
 <C-k>         snippet previous placeholder
 ;h            haskel import
@@ -170,19 +172,12 @@ In Normal mode:
  P: paste before cursor
 
 Press v, move to select, press d/y and then p to paste
-      o  to change selection direction
-Press V, for visual whole liness
-Pres <C-v> for block selecting.
-   e.g. delete the middle column of a table <c-v>, 3j, w, h and d
 
 ### New line
 o / O: new line after cursor / new line before cursor.
 
 ### Back and forth files/locations
 <C-o> and <C-i>:  jump back and forth between recent points in files
-
-### Move line up
-ddkP
 
 ### Split screens
 <C-w> v     vertical split
@@ -246,16 +241,20 @@ A / I: append end of line / insert start of line
 50G         Goto line 50
 %    matching (, [, {
 gg and G   star or end of file
-M          middle of document (doesn't work)
+M          cursor in the middle of screen
 
 ### Ranges
 :1,5s/this/that/g     replace from line 1 to 5
 :54s/this/that/g      replace in linne 54
 :.,$   from current to end
-### Text objects
 
-### Shifting
+### Text objects
+aw, iw, ...
+
+### Identation
 >> and <<
+>G      Ident end of file
+>ap     Ident a paragraph
 
 ### Scrolling
 <C-f>   forward screen
@@ -316,3 +315,10 @@ No formatting by default
 [visual] gq        # format paragraph
 gqap               # a paragraph
 gg gq G            # Format all text
+
+### Visual
+v         select (o     to change selection directio)
+V         line select
+<C-v>     block select
+   e.g. delete the middle column of a table <c-v>, 3j, w, h and d
+gv       Reselect the last visual selection
