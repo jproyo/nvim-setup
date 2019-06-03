@@ -82,3 +82,27 @@ autocmd CursorHold * silent call CocActionAsync('highlight')
 "hi link ALEWarning Warning
 "hi link ALEInfo SpellCap
 
+" haskell-vim
+let g:haskell_indent_if = 2               " Align 'then' two spaces after 'if'
+let g:haskell_indent_before_where = 2     " Indent 'where' block two spaces under previous body
+let g:haskell_indent_case_alternative = 1 " Allow a second case indent style (see haskell-vim README)
+let g:haskell_indent_let_no_in = 0        " Only next under 'let' if there's an equals sign
+let g:haskell_enable_quantification = 1   " to enable highlighting of `forall`
+let g:haskell_enable_recursivedo = 1      " to enable highlighting of `mdo` and `rec`
+let g:haskell_enable_arrowsyntax = 1      " to enable highlighting of `proc`
+let g:haskell_enable_pattern_synonyms = 1 " to enable highlighting of `pattern`
+let g:haskell_enable_typeroles = 1        " to enable highlighting of type roles
+let g:haskell_enable_static_pointers = 1  " to enable highlighting of `static`
+let g:haskell_backpack = 1                " to enable highlighting of backpack keywords
+
+" ----- hindent & stylish-haskell -----
+
+let g:hindent_on_save = 0 " Indenting on save is too aggressive for me
+
+
+" ----- w0rp/ale -----
+"  I prefer ghcid over ghc-mod for large projects
+"  ghcid integration: https://github.com/aiya000/vim-ghcid-quickfix
+"let g:ale_linters = {'haskell': ['ghc-mod', 'hlint']}
+let g:ale_linters = {'haskell': ['hlint']}
+

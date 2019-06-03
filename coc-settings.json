@@ -7,11 +7,5 @@
       "rootPatterns": ["build.sbt"],
       "filetypes": ["scala", "sbt"]
     },
-    "haskell": {
-      "command": "hie-wrapper",
-      "rootPatterns": [".stack.yaml", "cabal.config", "package.yaml"],
-      "filetypes": ["hs", "lhs", "haskell"],
-      "initializationOptions": {}
-    }
   }
 }

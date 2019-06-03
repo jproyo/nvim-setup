@@ -38,6 +38,7 @@ set backspace=2
 colorscheme dracula
 
 syntax on
+filetype plugin indent on
 
 set shell=/bin/zsh
 

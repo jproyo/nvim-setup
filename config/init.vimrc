@@ -8,7 +8,7 @@ Plug 'junegunn/fzf.vim'                                           " fuzzy finder
 Plug 'scrooloose/nerdtree'                                        " folders tree
 Plug 'scrooloose/nerdcommenter'                                   " code commenter
 Plug 'dracula/vim'                                                " dark theme
-"Plug 'kien/rainbow_parentheses.vim'                               " for nested parentheses
+" Plug 'kien/rainbow_parentheses.vim'                               " for nested parentheses
 Plug 'luochen1990/rainbow'                                        " Colored parentheses
 Plug 'tpope/vim-surround'                                         " quickly edit surroundings (brackets, html tags, etc)
 Plug 'junegunn/vim-easy-align'                                    " alignment plugin
@@ -21,12 +21,16 @@ Plug 'terryma/vim-multiple-cursors'                               " Multiple cur
 Plug 'neoclide/coc.nvim', {'do': { -> coc#util#install()}}        " LSP client + autocompletion plugin
 Plug 'itchyny/lightline.vim'                                      " configurable status line (can be used by coc)
 Plug 'derekwyatt/vim-scala'                                       " scala plugin
-                                                                  " Plug 'easymotion/vim-easymotion'
-                                                                  " Plug 'tpope/vim-repeat'
+" Plug 'easymotion/vim-easymotion'
+" Plug 'tpope/vim-repeat'
 Plug 'Xuyuanp/nerdtree-git-plugin'                                " Shows files git status on the NerdTree
 Plug 'airblade/vim-gitgutter'                                     " Show file git status
-"Plug 'rhysd/vim-grammarous'                                      " Grammar checker
-"Plug 'mileszs/ack.vim'                                            "Search Tool
+" Plug 'rhysd/vim-grammarous'                                      " Grammar checker
+" Plug 'mileszs/ack.vim'                                            "Search Tool
+Plug 'neovimhaskell/haskell-vim'                                  " Haskell Syntax and Identation
+Plug 'alx741/vim-stylishask'                                      " Haskell Formatting
+Plug 'alx741/vim-hindent'                                         " Haskell Formatting
+Plug 'w0rp/ale'                                                   " Haskell Linting
 
 call plug#end()
 
