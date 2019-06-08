@@ -31,6 +31,10 @@ Plug 'neovimhaskell/haskell-vim'                                  " Haskell Synt
 Plug 'alx741/vim-stylishask'                                      " Haskell Formatting
 Plug 'alx741/vim-hindent'                                         " Haskell Formatting
 Plug 'w0rp/ale'                                                   " Haskell Linting
+" Didn't work for scala cucumbers
+" Plug 'tpope/vim-cucumber'                                         " Cucumber goto definition
+Plug 'rizzatti/dash.vim'      "Dash
+Plug 'tpope/vim-unimpaired'                                       "better navigation
 
 call plug#end()
 

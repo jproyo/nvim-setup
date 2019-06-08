@@ -1,5 +1,15 @@
 # Adapted from: https://github.com/honza/vim-snippets
 
+# Cats imports
+snippet cats
+  import cats._, cats.data._, cats.implicits._
+  import cats.effect._, cats.effect.implicits._
+  import fs2._, fs2.io._
+
+# Finite duration
+snippet dur
+  import scala.concurrent.duration._
+
 #if
 snippet if
 	if (${1})

@@ -194,3 +194,9 @@ augroup haskellStylish
   " First hindent, then stylish-haskell
   au FileType haskell nnoremap <leader>hf :call HaskellFormat('both')<CR>
 augroup END
+
+" Dash
+:nmap <silent> <leader>d <Plug>DashSearch
+
+" Hoogle
+" :nmap <silent> <leader>h <Plug>Hoogle

@@ -39,6 +39,7 @@ You must add them at `.config/nvim/snippets/`.
   [visual] :'<,'>diffget   only some lines
 
 Merging:
+  :Gmerge
   After `git merge branch` conflict may arise.
   open the conflict file and then :Gvdiff
   Left (target = our branch), middle (working copy), right (merge branch)
@@ -81,6 +82,7 @@ Load in the buffer all previous revisions
 
 <C-f>  :NERDTreeToggle
 <C-s>  :NERDTreeFind [<path>] Find and reveal the current directory or the given path.
+m (on nerdtree menu)           to open fylesystem options
 ?  Help, use it !
 
 ### [nerdcommenter](https://github.com/scrooloose/nerdcommenter)
@@ -125,8 +127,8 @@ Regular expression
 
 ### Coc
 
-gd            adadgoto definition
-gr            adadgoto references
+gd            goto definition
+gr            goto references
 <leader>ac    codeAction on current line
 F             format
 K             show documentation
@@ -322,3 +324,6 @@ V         line select
 <C-v>     block select
    e.g. delete the middle column of a table <c-v>, 3j, w, h and d
 gv       Reselect the last visual selection
+
+### Unimpared
+To native through the quickfix window: ]q and [q
