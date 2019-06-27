@@ -1,6 +1,18 @@
 " map leader
 let mapleader=','
 
+" Override default behaviour.
+nnoremap o o<Esc>
+nnoremap O O<Esc>
+
+:nnoremap ff :vimgrep <cword> **/*.scala<CR>
+
+nnoremap <Esc><Esc> :w<CR>
+"nnoremap <leader>w :w<CR>
+nnoremap <leader>W :wa<CR>
+
+nnoremap Y y$
+
 " Handle window actions with Meta instead of <C-w>
 " Switching
 nnoremap <M-h> <C-w>h
@@ -149,6 +161,7 @@ nnoremap <silent> <space>p  :<C-u>CocListResume<CR>
 nnoremap <leader> <Esc> :pclose<CR>
 nnoremap <silent> <M-B> :call CocRequestAsync('metals', 'workspace/executeCommand', { 'command': 'build-import' })<CR>
 nnoremap <silent> <M-C> :call CocRequestAsync('metals', 'workspace/executeCommand', { 'command': 'build-connect' })<CR>
+nnoremap <silent> <M-D> :call CocRequestAsync('metals', 'workspace/executeCommand', { 'command': 'doctor-run' })<CR>
 "nnoremap <silent> <M-Z> :ccl<CR>
 
 " COC Snippets

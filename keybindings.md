@@ -15,6 +15,12 @@ You must add them at `.config/nvim/snippets/`.
 <C-k> previous placeholder
 :CocList snippets
 
+### [gitgutter](https://github.com/airblade/vim-gitgutter)
+
+<leader>hp           Preview hunk
+<leader>hu           Undo hunk
+<leader>hs           stage hunk
+
 ### [vim-fugitive](https://github.com/tpope/vim-fugitive)
 
 :Git command        Raw commands
@@ -24,6 +30,11 @@ You must add them at `.config/nvim/snippets/`.
 :Gmove [relative/abs]  :Git mv from to
 :Gcommit
 :Gblame
+                        g?    show this help
+                        q     close blame
+                        o     open commit in horizontal
+                        O     open commit in new tab
+
 :Gdiff (:Gvdiff)
   Left (index file) Right (working copy)
   :Gwrite (at index file) == :Gread (working copy)
@@ -57,7 +68,9 @@ Merging:
 
 :Glog  n [--reverse] (current file)
 Load in the buffer all previous revisions
-:cnext (<-) :cprevious (->)
+:copen to show a list of the different versions
+]q    :cnext
+[q    :cprevious
 :Gedit  go back
 
 :Glog -- path [% current]
@@ -142,6 +155,7 @@ K             show documentation
 <leader><ESC> close preview (signature help)
 <M-B>         metals build import
 <M-C>         metals connect
+<M-D>         metals doctor
 <C-j>         snippet next placeholder
 <C-k>         snippet previous placeholder
 ;h            haskel import
