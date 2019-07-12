@@ -10,9 +10,10 @@ LSP is managed by [coc.vim](https://github.com/neoclide/coc.nvim)
 Copy all this repository files inside `~/.config/nvim`.
 
 Then open nvim (an error message will appear, you can ignore it) and install
-the plugins added through `init.vim` via `:PlugInstall`.
+the plugins added through `config/init.vim` via `:PlugInstall`.
 
-Remember to install __metals-vim__ and __hie-haskell__.
+Remember to install __metals-vim__.
+
 Install [coc-snippets](https://github.com/neoclide/coc-snippets)
 
 Some plugins require node, yarn and python installed in the system.

@@ -2,8 +2,8 @@
 let mapleader=','
 
 " Override default behaviour.
-nnoremap o o<Esc>
-nnoremap O O<Esc>
+"nnoremap o o<Esc>
+"nnoremap O O<Esc>
 
 :nnoremap ff :vimgrep <cword> **/*.scala<CR>
 

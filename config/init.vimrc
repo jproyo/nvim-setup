@@ -36,5 +36,8 @@ Plug 'w0rp/ale'                                                   " Haskell Lint
 Plug 'rizzatti/dash.vim'      "Dash
 Plug 'tpope/vim-unimpaired'                                       "better navigation
 
+Plug 'ekalinin/Dockerfile.vim'
+Plug 'LnL7/vim-nix'                                               "Nix expressions in vim
+
 call plug#end()
 
