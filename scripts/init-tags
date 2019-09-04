@@ -1,0 +1,12 @@
+#!/bin/zsh
+# fast-tags wrapper to generate tags automatically if there are none.
+
+setopt extended_glob
+
+if [[ ! -r tags ]]; then
+    echo Generating tags from scratch...
+    exec fast-tags -R . --nomerge
+else
+    echo Updating tags...
+    exec fast-tags -R . --nomerge
+fi

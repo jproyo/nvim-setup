@@ -36,6 +36,7 @@ let mapleader=','
 set backspace=2
 
 colorscheme dracula
+"colorscheme gruvbox
 
 syntax on
 filetype plugin indent on
@@ -62,7 +63,6 @@ set formatoptions=jtcrq     " Sensible default line auto cutting and formatting.
 set linebreak               " Don't cut lines in the middle of a word .
 set showmatch               " Shows matching parenthesis.
 set matchtime=2             " Time during which the matching parenthesis is shown.
-set background=dark         " Color adapted to dark background.
 set listchars=tab:▸\ ,eol:¬ " Invisible characters representation when :set list.
 set clipboard=unnamedplus   " Copy/Paste to/from clipboard
 set cursorline              " Highlight line cursor is currently on

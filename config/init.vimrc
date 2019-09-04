@@ -8,6 +8,7 @@ Plug 'junegunn/fzf.vim'                                           " fuzzy finder
 Plug 'scrooloose/nerdtree'                                        " folders tree
 Plug 'scrooloose/nerdcommenter'                                   " code commenter
 Plug 'dracula/vim'                                                " dark theme
+Plug 'morhetz/gruvbox'                                            " color scheme
 " Plug 'kien/rainbow_parentheses.vim'                               " for nested parentheses
 Plug 'luochen1990/rainbow'                                        " Colored parentheses
 Plug 'tpope/vim-surround'                                         " quickly edit surroundings (brackets, html tags, etc)
@@ -38,6 +39,10 @@ Plug 'tpope/vim-unimpaired'                                       "better naviga
 
 Plug 'ekalinin/Dockerfile.vim'
 Plug 'LnL7/vim-nix'                                               "Nix expressions in vim
+
+Plug 'chrisbra/Recover.vim' " Add compare option to vim recover
+
+Plug 'ervandew/supertab' " Tab completition
 
 call plug#end()
 

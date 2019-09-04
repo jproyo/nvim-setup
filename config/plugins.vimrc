@@ -1,5 +1,5 @@
 " airline: status bar at the bottom
-let g:airline_powerline_fonts=1
+let g:airline_powerline_fonts=0
 
 " if you want to disable auto detect, comment out those two lines (COC)
 "let g:airline#extensions#disable_rtp_load = 1
@@ -28,7 +28,7 @@ let g:NERDTreeIndicatorMapCustom = {
 "autocmd StdinReadPre * let s:std_in=1
 "autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 " Close Nerdtree when it is  the last window opened
-autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+"autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
 " NerdTree config
 let g:NERDTreeDirArrowExpandable = '▸'
@@ -97,12 +97,21 @@ let g:haskell_backpack = 1                " to enable highlighting of backpack k
 
 " ----- hindent & stylish-haskell -----
 
-let g:hindent_on_save = 0 " Indenting on save is too aggressive for me
-
+let g:stylishask_config_file = "~/.stylish-haskell.yaml"
+let g:stylishask_on_save = 0
+let g:hindent_on_save    = 0
 
 " ----- w0rp/ale -----
 "  I prefer ghcid over ghc-mod for large projects
 "  ghcid integration: https://github.com/aiya000/vim-ghcid-quickfix
 "let g:ale_linters = {'haskell': ['ghc-mod', 'hlint']}
-let g:ale_linters = {'haskell': ['hlint']}
+
+" -- Deactivated
+"let g:ale_linters = {'haskell': ['hlint']}
+
+" Create/Update tags on save file
+augroup tags
+au BufWritePost *.hs            silent !init-tags
+au BufWritePost *.hsc           silent !init-tags
+augroup END
 

@@ -5,13 +5,20 @@ let mapleader=','
 "nnoremap o o<Esc>
 "nnoremap O O<Esc>
 
-:nnoremap ff :vimgrep <cword> **/*.scala<CR>
+":nnoremap ff :vimgrep <cword> **/*.scala<CR>
+:nnoremap ff :vimgrep <cword> **/*.hs<CR>
+:nnoremap <leader>ff :vimgrep <cword> **/*.sql<CR>
 
 nnoremap <Esc><Esc> :w<CR>
 "nnoremap <leader>w :w<CR>
 nnoremap <leader>W :wa<CR>
 
 nnoremap Y y$
+
+" Delete without copying
+nnoremap <leader>d "_d
+xnoremap <leader>d "_d
+xnoremap <leader>p "_dP
 
 " Handle window actions with Meta instead of <C-w>
 " Switching
@@ -209,7 +216,7 @@ augroup haskellStylish
 augroup END
 
 " Dash
-:nmap <silent> <leader>d <Plug>DashSearch
+" :nmap <silent> <leader>d <Plug>DashSearch
 
 " Hoogle
-" :nmap <silent> <leader>h <Plug>Hoogle
+au BufNewFile,BufRead *.hs map <buffer> <F1> :Hoogle

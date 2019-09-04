@@ -159,6 +159,10 @@ K             show documentation
 <C-j>         snippet next placeholder
 <C-k>         snippet previous placeholder
 ;h            haskel import
+<leader>hi    Format haskell code with Hident
+<leader>hs    Format haskell code with Stylish
+<leader>hf    Format haskell code with both
+
 
 ### Switching
 <M-h>
@@ -183,8 +187,10 @@ K             show documentation
 ### Copy / Paste
 In Normal mode:
  d: to cut
+ <leader>d  deletes but doesn't save in a buffer
  y: to copy (yank)
  p: paste after cursor
+ <leader>p   n times paste
  P: paste before cursor
 
 Press v, move to select, press d/y and then p to paste
