@@ -111,7 +111,7 @@ let g:hindent_on_save    = 0
 
 " Create/Update tags on save file
 augroup tags
-au BufWritePost *.hs            silent !init-tags
-au BufWritePost *.hsc           silent !init-tags
+au BufWritePost *.hs            silent !fast-tags -R . --nomerge
+au BufWritePost *.hsc           silent !fast-tags -R . --nomerge
 augroup END
 
