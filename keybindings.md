@@ -318,6 +318,7 @@ nvim -S session_01.vim           restore session
 vim -o one.txt two.txt       open all three files in split windows
 vim -d main.txt~ main.txt    show file diff
 :diffsp help.txt             Diff with backup file
+xp                           swap next two characters around
 
 ### Option window
 :options
@@ -337,6 +338,12 @@ No formatting by default
 [visual] gq        # format paragraph
 gqap               # a paragraph
 gg gq G            # Format all text
+
+### Upper/Lower case
+
+~       : invert case
+guu     : lowercase line
+gUU     : uppercase line<Paste>
 
 ### Visual
 v         select (o     to change selection directio)

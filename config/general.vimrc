@@ -58,7 +58,7 @@ set hidden                  " Hide files when leaving them.
 set number                  " Show line numbers.
 set numberwidth=1           " Minimum line number column width.
 set cmdheight=2             " Number of screen lines to use for the commandline.
-set textwidth=120           " Lines length limit (0 if no limit).
+"set textwidth=120           " Lines length limit (0 if no limit).
 set formatoptions=jtcrq     " Sensible default line auto cutting and formatting.
 set linebreak               " Don't cut lines in the middle of a word .
 set showmatch               " Shows matching parenthesis.
@@ -79,12 +79,16 @@ set nowrapscan " Don't go back to first match after the last match is found.
 " set foldlevelstart=1
 
 " Tabs
-set expandtab     " Tab transformed in spaces
-set tabstop=2     " Sets tab character to correspond to x columns.
-                  " x spaces are automatically converted to <tab>.
-                  " If expandtab option is on each <tab> character is converted to x spaces.
-set softtabstop=2 " column offset when PRESSING the tab key or the backspace key.
-set shiftwidth=2  " column offset when using keys '>' and '<' in normal mode.
+set tabstop=2       " The width of a TAB is set to 4.
+                    " Still it is a \t. It is just that
+                    " Vim will interpret it to be having
+                    " a width of 4.
+
+set shiftwidth=2    " Indents will have a width of 4
+
+set softtabstop=2   " Sets the number of columns for a TAB
+
+set expandtab       " Expand TABs to spaces
 
 " Disable mouse / touchpad (only in vim)
 set mouse=nicr

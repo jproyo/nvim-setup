@@ -115,3 +115,6 @@ au BufWritePost *.hs            silent !fast-tags -R . --nomerge
 au BufWritePost *.hsc           silent !fast-tags -R . --nomerge
 augroup END
 
+" Folding is disabled (https://github.com/plasticboy/vim-markdown#disable-folding)
+let g:vim_markdown_folding_disabled = 1
+
