@@ -20,18 +20,24 @@ nnoremap <leader>d "_d
 xnoremap <leader>d "_d
 xnoremap <leader>p "_dP
 
+" remap movement keys
+noremap ; l
+noremap l k
+noremap k j
+noremap j h
+
 " Handle window actions with Meta instead of <C-w>
 " Switching
-nnoremap <M-h> <C-w>h
-nnoremap <M-j> <C-w>j
-nnoremap <M-k> <C-w>k
-nnoremap <M-l> <C-w>l
+nnoremap <M-j> <C-w>h
+nnoremap <M-k> <C-w>j
+nnoremap <M-l> <C-w>k
+nnoremap <M-;> <C-w>l
 
 " Moving
-nnoremap <M-H> <C-w>H
-nnoremap <M-J> <C-w>J
-nnoremap <M-K> <C-w>K
-nnoremap <M-L> <C-w>L
+nnoremap <M-J> <C-w>H
+nnoremap <M-K> <C-w>J
+nnoremap <M-L> <C-w>K
+nnoremap <M-:> <C-w>L
 nnoremap <M-x> <C-w>x
 
 " Resizing
@@ -42,22 +48,22 @@ nnoremap <M-<> <C-w><
 nnoremap <M->> <C-w>>
 
 " Disable arrow keys and page up / down
-noremap <Up> <nop>
-noremap <Down> <nop>
-noremap <Left> <nop>
-noremap <Right> <nop>
-inoremap <Up> <nop>
-inoremap <Down> <nop>
-inoremap <Left> <nop>
-inoremap <Right> <nop>
-vnoremap <Up> <nop>
-vnoremap <Down> <nop>
-vnoremap <Left> <nop>
-vnoremap <Right> <nop>
-noremap <PageUp> <nop>
-inoremap <PageUp> <nop>
-vnoremap <PageUp> <nop>
-noremap <PageDown> <nop>
+noremap  <Up>       <nop>
+noremap  <Down>     <nop>
+noremap  <Left>     <nop>
+noremap  <Right>    <nop>
+inoremap <Up>       <nop>
+inoremap <Down>     <nop>
+inoremap <Left>     <nop>
+inoremap <Right>    <nop>
+vnoremap <Up>       <nop>
+vnoremap <Down>     <nop>
+vnoremap <Left>     <nop>
+vnoremap <Right>    <nop>
+noremap  <PageUp>   <nop>
+inoremap <PageUp>   <nop>
+vnoremap <PageUp>   <nop>
+noremap  <PageDown> <nop>
 inoremap <PageDown> <nop>
 vnoremap <PageDown> <nop>
 
