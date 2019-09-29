@@ -21,23 +21,23 @@ xnoremap <leader>d "_d
 xnoremap <leader>p "_dP
 
 " remap movement keys
-noremap ; l
-noremap l k
-noremap k j
-noremap j h
+"noremap ; l
+"noremap l k
+"noremap k j
+"noremap j h
 
 " Handle window actions with Meta instead of <C-w>
 " Switching
-nnoremap <M-j> <C-w>h
-nnoremap <M-k> <C-w>j
-nnoremap <M-l> <C-w>k
-nnoremap <M-;> <C-w>l
+nnoremap <M-h> <C-w>h
+nnoremap <M-j> <C-w>j
+nnoremap <M-k> <C-w>k
+nnoremap <M-l> <C-w>l
 
 " Moving
-nnoremap <M-J> <C-w>H
-nnoremap <M-K> <C-w>J
-nnoremap <M-L> <C-w>K
-nnoremap <M-:> <C-w>L
+nnoremap <M-H> <C-w>H
+nnoremap <M-J> <C-w>J
+nnoremap <M-K> <C-w>K
+nnoremap <M-L> <C-w>L
 nnoremap <M-x> <C-w>x
 
 " Resizing
@@ -225,4 +225,6 @@ augroup END
 " :nmap <silent> <leader>d <Plug>DashSearch
 
 " Hoogle
-au BufNewFile,BufRead *.hs map <buffer> <F1> :Hoogle
+"au BufNewFile,BufRead *.hs map <buffer> <F1> :Hoogle
+nnoremap <F1> :Hoogle<CR>
+
