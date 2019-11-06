@@ -354,3 +354,5 @@ gv       Reselect the last visual selection
 
 ### Unimpared
 To native through the quickfix window: ]q and [q
+
+<C-a>/<C-x>: increment/decrement a number LOL

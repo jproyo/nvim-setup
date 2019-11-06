@@ -14,7 +14,8 @@ set encoding=utf-8
 
 function! TrimWhitespace()
     let l:save_cursor = getpos('.')
-    %s/\s\+$//e
+    %s/\s\+$//e   " Trim trailing whitespaces
+    " %s/\t/  /g    " Replace tabs for whitespaces
     call setpos('.', l:save_cursor)
 endfun
 

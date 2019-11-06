@@ -15,19 +15,16 @@ Plug 'junegunn/vim-easy-align'                                    " alignment pl
 Plug 'neomake/neomake'                                            " run programs asynchronously and highlight errors
 Plug 'Valloric/MatchTagAlways'                                    " highlights html enclosing tags
 Plug 'Twinside/vim-hoogle'                                        " Hoogle search (Haskell) in Vim
-Plug 'Shougo/unite.vim'                                           " Required by some haskell plugins
-Plug 'ujihisa/unite-haskellimport'                                " Suggestions on imports
 Plug 'terryma/vim-multiple-cursors'                               " Multiple cursors selection, etc
-Plug 'neoclide/coc.nvim', {'do': { -> coc#util#install()}}        " LSP client + autocompletion plugin
+"Plug 'neoclide/coc.nvim', {'do': { -> coc#util#install()}}        " LSP client + autocompletion plugin
+"Plug 'derekwyatt/vim-scala'                                       " scala plugin
+"Plug 'rizzatti/dash.vim'                                          " Dash
 Plug 'itchyny/lightline.vim'                                      " configurable status line (can be used by coc)
-Plug 'derekwyatt/vim-scala'                                       " scala plugin
 Plug 'Xuyuanp/nerdtree-git-plugin'                                " Shows files git status on the NerdTree
 Plug 'airblade/vim-gitgutter'                                     " Show file git status
 Plug 'neovimhaskell/haskell-vim'                                  " Haskell Syntax and Identation
 Plug 'alx741/vim-stylishask'                                      " Haskell Formatting
 Plug 'alx741/vim-hindent'                                         " Haskell Formatting
-Plug 'w0rp/ale'                                                   " Haskell Linting
-Plug 'rizzatti/dash.vim'                                          " Dash
 Plug 'tpope/vim-unimpaired'                                       " better navigation
 Plug 'ekalinin/Dockerfile.vim'
 Plug 'LnL7/vim-nix'                                               " Nix expressions in vim
@@ -37,6 +34,13 @@ Plug 'godlygeek/tabular'                                          " vim-markdown
 Plug 'plasticboy/vim-markdown'                                    " Markdown utilities
 " It doesn't work with fast-tags
 "Plug 'majutsushi/tagbar'                                          " Tags bar
+Plug 'vmchale/pointfree'                                           " Pointfree for haskell
+Plug 'vmchale/hs-conceal'                                          " Replace forall and so in *.hs files
+Plug 'vmchale/cabal-project-vim'                                   " Syntax highlight for *.cabal files
+Plug 'vmchale/ghci-syntax'                                         " Syntax highlight for ghci configuration files
+"Plug 'vmchale/c2hs-vim'                                            " Syntax highlight for *.c2hs files
+Plug 'vim-syntastic/syntastic'                                     " Hlint for hs
+Plug 'hspec/hspec.vim'                                             " Highlight for HSpec
 
 call plug#end()
 

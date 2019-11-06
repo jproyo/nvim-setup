@@ -65,10 +65,10 @@ set nowritebackup
 set cmdheight=2
 
 " Show signature help
-autocmd User CocJumpPlaceholder call CocActionAsync('showSignatureHelp')
+"autocmd User CocJumpPlaceholder call CocActionAsync('showSignatureHelp')
 
 " Highlight symbol under cursor on CursorHold
-autocmd CursorHold * silent call CocActionAsync('highlight')
+"autocmd CursorHold * silent call CocActionAsync('highlight')
 
 " No preview window on autocompletion (vim-lsc)
 "set completeopt-=preview
@@ -118,3 +118,17 @@ augroup END
 " Folding is disabled (https://github.com/plasticboy/vim-markdown#disable-folding)
 let g:vim_markdown_folding_disabled = 1
 
+" Syntastic Configuration
+" A syntactic checker like hlint should be installed in your PATH
+" Run :SyntasticInfo to see what syntactic checkers are supported and enabled.
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+
+" Pointfree Configuration (:help pointfree)
+au BufNewFile,BufRead *.hs nmap pf <Plug>Pointfree

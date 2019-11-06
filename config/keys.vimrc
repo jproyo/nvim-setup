@@ -9,6 +9,16 @@ let mapleader=','
 :nnoremap ff :vimgrep <cword> **/*.hs<CR>
 :nnoremap <leader>ff :vimgrep <cword> **/*.sql<CR>
 
+" Git
+:nnoremap gf :G<CR>
+:nnoremap gv :Gvdiff<CR>
+
+" Quit
+:nnoremap qq :q<CR>
+
+" Replace tabs with spaces
+:nnoremap <leader>tt :%s/\t/  /g<CR>
+
 nnoremap <Esc><Esc> :w<CR>
 "nnoremap <leader>w :w<CR>
 nnoremap <leader>W :wa<CR>
@@ -20,27 +30,36 @@ nnoremap <leader>d "_d
 xnoremap <leader>d "_d
 xnoremap <leader>p "_dP
 
-" remap movement keys
-"noremap ; l
-"noremap l k
-"noremap k j
-"noremap j h
 
-" Handle window actions with Meta instead of <C-w>
-" Switching
+" Switching buffer
 nnoremap <M-h> <C-w>h
 nnoremap <M-j> <C-w>j
 nnoremap <M-k> <C-w>k
 nnoremap <M-l> <C-w>l
 
-" Moving
+" Moving buffer
 nnoremap <M-H> <C-w>H
 nnoremap <M-J> <C-w>J
 nnoremap <M-K> <C-w>K
 nnoremap <M-L> <C-w>L
 nnoremap <M-x> <C-w>x
 
-" Resizing
+" Mapping for keyboardio
+"noremap ; l
+"noremap l k
+"noremap k j
+"noremap j h
+"nnoremap <M-j> <C-w>h
+"nnoremap <M-k> <C-w>j
+"nnoremap <M-l> <C-w>k
+"nnoremap <M-;> <C-w>l
+"nnoremap <M-J> <C-w>H
+"nnoremap <M-K> <C-w>J
+"nnoremap <M-L> <C-w>K
+"nnoremap <M-:> <C-w>L
+"nnoremap <M-x> <C-w>x
+
+" Resizing buffer
 nnoremap <M-=> <C-w>=
 nnoremap <M-+> <C-w>+
 nnoremap <M--> <C-w>-
@@ -193,13 +212,6 @@ let g:coc_snippet_prev = '<c-k>'
 " Use <C-j> for both expand and jump (make expand higher priority.)
 imap <C-j> <Plug>(coc-snippets-expand-jump)
 
-" Haskell plugins
-nnoremap <silent> ;h :execute "Unite -start-insert haskellimport"<CR>
-"nnoremap <silent> <C-h> :execute "Unite hoogle"<CR> " too slow
-
-" Failed attempt
-"nnoremap <silent> B :command! l-nargs=1 "vimgrep <args> **/*.scala **/*.sc **/*.sbt"<CR>
-
 " Hindent & Stylish-haskell
 function! HaskellFormat(which) abort
   if a:which ==# 'hindent' || a:which ==# 'both'
@@ -227,4 +239,6 @@ augroup END
 " Hoogle
 "au BufNewFile,BufRead *.hs map <buffer> <F1> :Hoogle
 nnoremap <F1> :Hoogle<CR>
+nnoremap <F2> :HoogleClose<CR>
 
+nnoremap <leader>o :only<CR>
