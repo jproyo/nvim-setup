@@ -132,7 +132,7 @@ nnoremap <C-p> :FZF<CR>
 " Disable touchpad on startup / Enable it back on exit (at the OS level)
 "autocmd VimEnter * !~/.config/nvim/scripts/touchpad-off.sh
 "autocmd VimLeave * !~/.config/nvim/scripts/touchpad-on.sh
-nnoremap <silent> <F3> :!~/.config/nvim/scripts/touchpad-toggle.sh <enter><CR>
+"nnoremap <silent> <F3> :!~/.config/nvim/scripts/touchpad-toggle.sh <enter><CR>
 
 " Use <c-space> for trigger completion.
 inoremap <silent><expr> <c-space> coc#refresh()
