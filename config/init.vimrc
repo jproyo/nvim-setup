@@ -9,6 +9,7 @@ Plug 'scrooloose/nerdtree'                                        " folders tree
 Plug 'scrooloose/nerdcommenter'                                   " code commenter
 Plug 'dracula/vim'                                                " dark theme
 Plug 'morhetz/gruvbox'                                            " color scheme
+Plug 'altercation/vim-colors-solarized'
 Plug 'luochen1990/rainbow'                                        " Colored parentheses
 Plug 'tpope/vim-surround'                                         " quickly edit surroundings (brackets, html tags, etc)
 Plug 'junegunn/vim-easy-align'                                    " alignment plugin

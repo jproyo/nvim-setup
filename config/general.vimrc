@@ -37,7 +37,8 @@ let mapleader=','
 set backspace=2
 
 colorscheme dracula
-"colorscheme gruvbox
+"set background=light
+"colorscheme solarized
 
 syntax on
 filetype plugin indent on

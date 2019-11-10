@@ -3,7 +3,6 @@
 Plugins are managed by [vim-plug](https://github.com/junegunn/vim-plug)
 LSP is managed by [coc.vim](https://github.com/neoclide/coc.nvim)
 - For scala: [metals](https://scalameta.org/metals/docs/editors/vim.html)
-- For haskell: [hie-haskell](https://github.com/haskell/haskell-ide-engine)
 
 ### Installing from scratches
 
