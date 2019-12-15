@@ -238,7 +238,8 @@ augroup END
 
 " Hoogle
 "au BufNewFile,BufRead *.hs map <buffer> <F1> :Hoogle
-nnoremap <F1> :Hoogle<CR>
-nnoremap <F2> :HoogleClose<CR>
+nnoremap <leader>1 :Hoogle<CR>
+nnoremap <leader>2 :HoogleClose<CR>
+nnoremap <leader>3 :SyntasticToggleMode<CR>
 
 nnoremap <leader>o :only<CR>
