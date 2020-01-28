@@ -32,17 +32,27 @@ xnoremap <leader>p "_dP
 
 
 " Switching buffer
-nnoremap <M-h> <C-w>h
-nnoremap <M-j> <C-w>j
-nnoremap <M-k> <C-w>k
-nnoremap <M-l> <C-w>l
+nnoremap <C-n> :bn<cr>
+nnoremap <C-b> :bp<cr>
+nnoremap <leader>b :Buffers<space>
+"Tabs
+nnoremap <leader>t :tab
+nnoremap <M-n> :tabn<cr>
+nnoremap <M-p> :tabp<cr>
+nnoremap <C-Tab> :tabn<cr>
+nnoremap <C-S-Tab> :tabp<cr>
+nnoremap tn :tabe<CR>
+nnoremap te :tabe %<CR>
+nnoremap tf :tabf<Space>
+nnoremap tc :tabc<CR>
+nnoremap to :tabo<CR>
+nnoremap tm :tabm<CR>
+nnoremap ts :tabs<CR>
 
-" Moving buffer
-nnoremap <M-H> <C-w>H
-nnoremap <M-J> <C-w>J
-nnoremap <M-K> <C-w>K
-nnoremap <M-L> <C-w>L
-nnoremap <M-x> <C-w>x
+nnoremap th :tabr<CR>
+nnoremap tj :tabn<CR>
+nnoremap tk :tabp<CR>
+nnoremap tl :tabl<CR>
 
 " Mapping for keyboardio
 "noremap ; l
@@ -113,7 +123,7 @@ xmap ga <Plug>(EasyAlign)
 nmap ga <Plug>(EasyAlign)
 
 "    Nerdtree
-map <C-F> :NERDTreeToggle<CR>
+map <C-p> :NERDTreeToggle<CR>
 map <C-S> :NERDTreeFind<CR>
 
 " Toggle display of tabs and EOF
@@ -127,7 +137,7 @@ augroup vimscript_augroup
 augroup END
 
 " Fuzzy finder shortcut
-nnoremap <C-p> :FZF<CR>
+nnoremap <C-f> :FZF<CR>
 
 " Disable touchpad on startup / Enable it back on exit (at the OS level)
 "autocmd VimEnter * !~/.config/nvim/scripts/touchpad-off.sh
@@ -251,6 +261,3 @@ nnoremap <C-g> :Ghcid -c<space>
 nnoremap <C-i> :Ghcid<CR>
 nnoremap <C-k> :GhcidKill<CR>
 
-"Buffers
-nnoremap <leader>n :bnext<CR>
-nnoremap <leader>b :buffer<space>
