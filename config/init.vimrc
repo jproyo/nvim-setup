@@ -17,8 +17,6 @@ Plug 'neomake/neomake'                                            " run programs
 Plug 'Twinside/vim-hoogle'                                        " Hoogle search (Haskell) in Vim
 Plug 'terryma/vim-multiple-cursors'                               " Multiple cursors selection, etc
 "Plug 'neoclide/coc.nvim', {'do': { -> coc#util#install()}}        " LSP client + autocompletion plugin
-"Plug 'derekwyatt/vim-scala'                                       " scala plugin
-"Plug 'rizzatti/dash.vim'                                          " Dash
 Plug 'itchyny/lightline.vim'                                      " configurable status line (can be used by coc)
 Plug 'Xuyuanp/nerdtree-git-plugin'                                " Shows files git status on the NerdTree
 Plug 'airblade/vim-gitgutter'                                     " Show file git status
@@ -34,14 +32,11 @@ Plug 'chrisbra/Recover.vim'                                       " Add compare 
 Plug 'ervandew/supertab'                                          " Tab completition
 Plug 'godlygeek/tabular'                                          " vim-markdown dependency
 Plug 'plasticboy/vim-markdown'                                    " Markdown utilities
-" It doesn't work with fast-tags
-"Plug 'majutsushi/tagbar'                                          " Tags bar
 Plug 'vmchale/pointfree'                                           " Pointfree for haskell
-"Plug 'vmchale/hs-conceal'                                          " Replace forall and so in *.hs files
 Plug 'vmchale/cabal-project-vim'                                   " Syntax highlight for *.cabal files
 Plug 'vmchale/ghci-syntax'                                         " Syntax highlight for ghci configuration files
-"Plug 'vmchale/c2hs-vim'                                            " Syntax highlight for *.c2hs files
 Plug 'vim-syntastic/syntastic'                                     " Hlint for hs
+Plug 'ndmitchell/ghcid', { 'rtp': 'plugins/nvim' }
 
 call plug#end()
 
