@@ -32,8 +32,8 @@ xnoremap <leader>p "_dP
 
 
 " Switching buffer
-nnoremap <C-n> :bn<cr>
-nnoremap <C-b> :bp<cr>
+nnoremap <C-b> :bn<cr>
+nnoremap <C-v> :bp<cr>
 nnoremap <leader>b :Buffers<space>
 "Tabs
 nnoremap <leader>t :tab
