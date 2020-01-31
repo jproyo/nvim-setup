@@ -33,12 +33,12 @@ xnoremap <leader>p "_dP
 
 " Switching buffer
 nnoremap <C-b> :bn<cr>
-nnoremap <C-v> :bp<cr>
+nnoremap <C-m> :bp<cr>
 nnoremap <leader>b :Buffers<space>
 "Tabs
 nnoremap <leader>t :tab
 nnoremap <M-n> :tabn<cr>
-nnoremap <M-p> :tabp<cr>
+noremap <M-p> :tabp<cr>
 nnoremap <C-Tab> :tabn<cr>
 nnoremap <C-S-Tab> :tabp<cr>
 nnoremap tn :tabe<CR>
@@ -54,61 +54,18 @@ nnoremap tj :tabn<CR>
 nnoremap tk :tabp<CR>
 nnoremap tl :tabl<CR>
 
-" Mapping for keyboardio
-"noremap ; l
-"noremap l k
-"noremap k j
 "noremap j h
-"nnoremap <M-j> <C-w>h
-"nnoremap <M-k> <C-w>j
-"nnoremap <M-l> <C-w>k
-"nnoremap <M-;> <C-w>l
-"nnoremap <M-J> <C-w>H
-"nnoremap <M-K> <C-w>J
-"nnoremap <M-L> <C-w>K
-"nnoremap <M-:> <C-w>L
-"nnoremap <M-x> <C-w>x
+nnoremap <C-h> <C-w><C-h>
+nnoremap <C-k> <C-w><C-j>
+nnoremap <C-k> <C-w><C-k>
+nnoremap <C-l> <C-w><C-l>
+nnoremap <C-x> <C-w><C-x>
 
 " Resizing buffer
-nnoremap <M-=> <C-w>=
-nnoremap <M-+> <C-w>+
-nnoremap <M--> <C-w>-
-nnoremap <M-<> <C-w><
-nnoremap <M->> <C-w>>
-
-" Disable arrow keys and page up / down
-"noremap  <Up>       <nop>
-"noremap  <Down>     <nop>
-"noremap  <Left>     <nop>
-"noremap  <Right>    <nop>
-"inoremap <Up>       <nop>
-"inoremap <Down>     <nop>
-"inoremap <Left>     <nop>
-"inoremap <Right>    <nop>
-"vnoremap <Up>       <nop>
-"vnoremap <Down>     <nop>
-"vnoremap <Left>     <nop>
-"vnoremap <Right>    <nop>
-"noremap  <PageUp>   <nop>
-"inoremap <PageUp>   <nop>
-"vnoremap <PageUp>   <nop>
-"noremap  <PageDown> <nop>
-"inoremap <PageDown> <nop>
-"vnoremap <PageDown> <nop>
-
-" Disable mouse / touchpad (only in vim)
-"inoremap <ScrollWheelUp> <nop>
-"inoremap <S-ScrollWheelUp> <nop>
-"inoremap <C-ScrollWheelUp> <nop>
-"inoremap <ScrollWheelDown> <nop>
-"inoremap <S-ScrollWheelDown> <nop>
-"inoremap <C-ScrollWheelDown> <nop>
-"inoremap <ScrollWheelLeft> <nop>
-"inoremap <S-ScrollWheelLeft> <nop>
-"inoremap <C-ScrollWheelLeft> <nop>
-"inoremap <ScrollWheelRight> <nop>
-"inoremap <S-ScrollWheelRight> <nop>
-"inoremap <C-ScrollWheelRight> <nop>
+nnoremap <C-+> :resize +1<CR>
+nnoremap <C--> :resize -1<CR>
+nnoremap <C->> :vertical resize -1<CR>
+nnoremap <C-<> :vertical resize +1<CR>
 
 " Clear search highlighting
 nnoremap <C-z> :nohlsearch<CR>
@@ -256,8 +213,8 @@ nnoremap <leader>o :only<CR>
 
 "Ghcid bindings
 "Start Ghcid with default stack ghci
-nnoremap <C-d> :Ghcid -c "stack ghci"<CR>
-nnoremap <C-g> :Ghcid -c<space>
-nnoremap <C-i> :Ghcid<CR>
-nnoremap <C-k> :GhcidKill<CR>
+nnoremap <leader>d :Ghcid -c "stack ghci"<CR>
+nnoremap <leader>g :Ghcid -c<space>
+nnoremap <leader>i :Ghcid<CR>
+nnoremap <leader>k :GhcidKill<CR>
 
