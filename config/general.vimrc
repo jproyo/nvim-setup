@@ -95,3 +95,4 @@ set expandtab       " Expand TABs to spaces
 " Disable mouse / touchpad (only in vim)
 set mouse=nicr
 
+let $FZF_DEFAULT_COMMAND = 'find -L . -path ./.git -prune -o -print'
