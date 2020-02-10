@@ -1,6 +1,10 @@
 " map leader
 let mapleader=','
 
+" In the quickfix window, <CR> is used to jump to the error under the
+" cursor, so undefine the mapping there.
+autocmd BufReadPost quickfix nnoremap <buffer> <CR> <CR>
+
 " Override default behaviour.
 "nnoremap o o<Esc>
 "nnoremap O O<Esc>
