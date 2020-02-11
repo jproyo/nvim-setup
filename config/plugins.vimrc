@@ -134,3 +134,4 @@ let g:syntastic_mode_map = { "mode": "active", "passive_filetypes": ["haskell", 
 
 " Pointfree Configuration (:help pointfree)
 au BufNewFile,BufRead *.hs nmap pf <Plug>Pointfree
+

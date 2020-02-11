@@ -37,6 +37,7 @@ Plug 'vmchale/cabal-project-vim'                                   " Syntax high
 Plug 'vmchale/ghci-syntax'                                         " Syntax highlight for ghci configuration files
 Plug 'vim-syntastic/syntastic'                                     " Hlint for hs
 Plug 'ndmitchell/ghcid', { 'rtp': 'plugins/nvim' }
+Plug 'vim-latex/vim-latex'
 
 call plug#end()
 
