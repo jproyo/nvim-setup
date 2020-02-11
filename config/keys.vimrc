@@ -60,7 +60,7 @@ nnoremap tl :tabl<CR>
 
 "noremap j h
 nnoremap <C-h> <C-w><C-h>
-nnoremap <C-k> <C-w><C-j>
+nnoremap <C-j> <C-w><C-j>
 nnoremap <C-k> <C-w><C-k>
 nnoremap <C-l> <C-w><C-l>
 nnoremap <C-x> <C-w><C-x>
