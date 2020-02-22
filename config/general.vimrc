@@ -96,3 +96,6 @@ set expandtab       " Expand TABs to spaces
 set mouse=nicr
 
 let $FZF_DEFAULT_COMMAND = 'find -L . \( -path ./.git -prune -o -path ./.stack-work -prune \) -o -print'
+
+let g:Tex_ViewRule_pdf = 'open -a Skim'
+let g:syntastic_tex_checkers = ['lacheck']
