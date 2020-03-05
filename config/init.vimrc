@@ -16,7 +16,7 @@ Plug 'junegunn/vim-easy-align'                                    " alignment pl
 Plug 'neomake/neomake'                                            " run programs asynchronously and highlight errors
 Plug 'Twinside/vim-hoogle'                                        " Hoogle search (Haskell) in Vim
 Plug 'terryma/vim-multiple-cursors'                               " Multiple cursors selection, etc
-"Plug 'neoclide/coc.nvim', {'do': { -> coc#util#install()}}        " LSP client + autocompletion plugin
+Plug 'neoclide/coc.nvim', {'do': { -> coc#util#install()}}        " LSP client + autocompletion plugin
 Plug 'itchyny/lightline.vim'                                      " configurable status line (can be used by coc)
 Plug 'Xuyuanp/nerdtree-git-plugin'                                " Shows files git status on the NerdTree
 Plug 'airblade/vim-gitgutter'                                     " Show file git status
