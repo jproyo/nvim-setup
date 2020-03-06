@@ -1,4 +1,4 @@
-" map leader
+" ma leader
 let mapleader=','
 
 " In the quickfix window, <CR> is used to jump to the error under the
@@ -157,9 +157,6 @@ nnoremap <silent> <space>p  :<C-u>CocListResume<CR>
 
 " close preview (shown for hover / signature help)
 nnoremap <leader> <Esc> :pclose<CR>
-nnoremap <silent> <M-B> :call CocRequestAsync('metals', 'workspace/executeCommand', { 'command': 'build-import' })<CR>
-nnoremap <silent> <M-C> :call CocRequestAsync('metals', 'workspace/executeCommand', { 'command': 'build-connect' })<CR>
-nnoremap <silent> <M-D> :call CocRequestAsync('metals', 'workspace/executeCommand', { 'command': 'doctor-run' })<CR>
 "nnoremap <silent> <M-Z> :ccl<CR>
 
 " COC Snippets
