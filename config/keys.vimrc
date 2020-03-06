@@ -142,6 +142,8 @@ endfunction
 " Remap for rename current word
 nmap <leader>rn <Plug>(coc-rename)
 
+nnoremap <silent> <space>rn :<C-u>CocCommand document.renameCurrentWord<cr>
+
 " Show all diagnostics
 nnoremap <silent> <space>a  :<C-u>CocList diagnostics<cr>
 " Find symbol of current document
