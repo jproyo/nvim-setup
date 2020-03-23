@@ -21,8 +21,8 @@ Plug 'itchyny/lightline.vim'                                      " configurable
 Plug 'Xuyuanp/nerdtree-git-plugin'                                " Shows files git status on the NerdTree
 Plug 'airblade/vim-gitgutter'                                     " Show file git status
 Plug 'neovimhaskell/haskell-vim'                                  " Haskell Syntax and Identation
-Plug 'alx741/vim-stylishask'                                      " Haskell Formatting
-Plug 'alx741/vim-hindent'                                         " Haskell Formatting
+"Plug 'alx741/vim-stylishask'                                      " Haskell Formatting
+"Plug 'alx741/vim-hindent'                                         " Haskell Formatting
 Plug 'tpope/vim-unimpaired'                                       " better navigation
 Plug 'ekalinin/Dockerfile.vim'
 " Until I discover how to disable indent on nix files properly, I sadly have
@@ -38,6 +38,7 @@ Plug 'vmchale/ghci-syntax'                                         " Syntax high
 Plug 'vim-syntastic/syntastic'                                     " Hlint for hs
 Plug 'ndmitchell/ghcid', { 'rtp': 'plugins/nvim' }
 Plug 'vim-latex/vim-latex'
+Plug 'sbdchd/neoformat'
 
 call plug#end()
 

@@ -123,7 +123,7 @@ nmap <leader>ac <Plug>(coc-codeaction)
 
 " Remap for do action format
 "nmap <silent> F <Plug>(coc-action-format) "does not work
-nnoremap <silent> F :call CocAction('format')<CR>
+"nnoremap <silent> F :call CocAction('format')<CR>
 
 " Show signature help
 autocmd User CocJumpPlaceholder call CocActionAsync('showSignatureHelp')
@@ -179,8 +179,8 @@ imap <C-j> <Plug>(coc-snippets-expand-jump)
 
 " Hindent & Stylish-haskell
 function! HaskellFormat(which) abort
-  if a:which ==# 'hindent' || a:which ==# 'both'
-    :Hindent
+  if a:which ==# 'neoformat' || a:which ==# 'both'
+    :Neoformat
   endif
   if a:which ==# 'stylish' || a:which ==# 'both'
     silent! exe 'undojoin'
@@ -191,11 +191,11 @@ endfunction
 augroup haskellStylish
   au!
   " Just hindent
-  au FileType haskell nnoremap <leader>hi :Hindent<CR>
+  au FileType haskell nnoremap <silent>F :Neoformat<CR>
   " Just stylish-haskell
-  au FileType haskell nnoremap <leader>hs :call HaskellFormat('stylish')<CR>
+  au FileType haskell nnoremap <silent>FS :call HaskellFormat('stylish')<CR>
   " First hindent, then stylish-haskell
-  au FileType haskell nnoremap <leader>hf :call HaskellFormat('both')<CR>
+  au FileType haskell nnoremap <silent>FF :call HaskellFormat('both')<CR>
 augroup END
 
 " Dash
@@ -216,3 +216,4 @@ nnoremap <leader>g :Ghcid -c<space>
 nnoremap <leader>i :Ghcid<CR>
 nnoremap <leader>k :GhcidKill<CR>
 
+nnoremap <leader>su viw<esc>a)<esc>hbi(<esc>lel

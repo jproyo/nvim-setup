@@ -101,3 +101,4 @@ let g:Tex_ViewRule_pdf = 'open -a Skim'
 let g:syntastic_tex_checkers = ['lacheck']
 
 autocmd FileType latex,tex,md,markdown setlocal spell spelllang=en_us
+
