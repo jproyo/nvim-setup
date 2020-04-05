@@ -39,6 +39,7 @@ Plug 'vim-syntastic/syntastic'                                     " Hlint for h
 Plug 'ndmitchell/ghcid', { 'rtp': 'plugins/nvim' }
 Plug 'vim-latex/vim-latex'
 Plug 'sbdchd/neoformat'
+Plug 'vim-scripts/dbext.vim'
 
 call plug#end()
 

@@ -98,6 +98,9 @@ set mouse=nicr
 let $FZF_DEFAULT_COMMAND = 'find -L . \( -path ./.git -prune -o -path ./.stack-work -prune \) -o -print'
 
 let g:Tex_ViewRule_pdf = 'open -a Skim'
+let g:Tex_CompileRule_pdf =	'pdflatex -shell-escape -interaction=nonstopmode $*'
+let g:Tex_DefaultTargetFormat='pdf'
+let g:Tex_MultipleCompileFormats='pdf,bibtex,makeglossaries,pdf'
 let g:syntastic_tex_checkers = ['lacheck']
 
 autocmd FileType latex,tex,md,markdown setlocal spell spelllang=en_us
