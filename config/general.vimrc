@@ -105,3 +105,5 @@ let g:syntastic_tex_checkers = ['lacheck']
 
 autocmd FileType latex,tex,md,markdown setlocal spell spelllang=en_us
 
+let vim_markdown_preview_github=1
+let vim_markdown_preview_hotkey='<C-m>'

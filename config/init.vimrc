@@ -40,6 +40,7 @@ Plug 'ndmitchell/ghcid', { 'rtp': 'plugins/nvim' }
 Plug 'vim-latex/vim-latex'
 Plug 'sbdchd/neoformat'
 Plug 'vim-scripts/dbext.vim'
+Plug 'JamshedVesuna/vim-markdown-preview'
 
 call plug#end()
 
