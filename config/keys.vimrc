@@ -86,6 +86,7 @@ nmap ga <Plug>(EasyAlign)
 "    Nerdtree
 map <C-p> :NERDTreeToggle<CR>
 map <C-S> :NERDTreeFind<CR>
+map <C-c> :NERDTreeRefreshRoot<CR>
 
 " Toggle display of tabs and EOF
 nnoremap <leader>l :set list!<CR>
