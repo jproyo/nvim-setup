@@ -192,7 +192,7 @@ endfunction
 augroup haskellStylish
   au!
   " Just hindent
-  au FileType haskell nnoremap <silent>F :Neoformat<CR>
+  au FileType haskell nnoremap <silent>F :call RunOrmolu()<CR>
   " Just stylish-haskell
   au FileType haskell nnoremap <silent>FS :call HaskellFormat('stylish')<CR>
   " First hindent, then stylish-haskell
@@ -210,11 +210,6 @@ nnoremap <leader>3 :SyntasticToggleMode<CR>
 
 nnoremap <leader>o :only<CR>
 
-"Ghcid bindings
-"Start Ghcid with default stack ghci
-nnoremap <leader>d :Ghcid -c "stack ghci"<CR>
-nnoremap <leader>g :Ghcid -c<space>
-nnoremap <leader>i :Ghcid<CR>
-nnoremap <leader>k :GhcidKill<CR>
-
 nnoremap <leader>su viw<esc>a)<esc>hbi(<esc>lel
+
+

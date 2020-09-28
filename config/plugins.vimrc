@@ -12,7 +12,7 @@ let g:airline_section_warning = '%{airline#util#wrap(airline#extensions#coc#get_
 filetype plugin on
 
 " Nerdtree git plugin symbols
-let g:NERDTreeIndicatorMapCustom = {
+let g:NERDTreeGitStatusIndicatorMapCustom = {
     \ "Modified"  : "ᵐ",
     \ "Staged"    : "ˢ",
     \ "Untracked" : "ᵘ",
@@ -38,7 +38,7 @@ let g:NERDTreeMinimalUI = 1
 let g:NERDTreeDirArrows = 1
 let g:NERDTreeShowHidden = 1
 
-let g:NERDTreeShowGitStatus = 1
+let g:NERDTreeGitStatusEnable = 1
 
 " Rainbow brackets
 let g:rainbow_active = 1

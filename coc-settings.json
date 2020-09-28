@@ -1,17 +1,17 @@
 {
   "languageserver": {
     "haskell": {
-      "command": "ghcide",
+      "command": "haskell-language-server-wrapper",
       "args": ["--lsp"],
-      "rootPatterns": [".stack.yaml", "cabal.config", "package.yaml", "stack.yaml"],
-      "filetypes": ["hs", "lhs", "haskell"],
+      "rootPatterns": ["*.cabal", "stack.yaml", "cabal.project", "package.yaml", "hie.yaml"],
+      "filetypes": ["haskell", "lhaskell"],
       "initializationOptions": {
-        "languageServerHaskell": {
+        "haskell": {
           "hlintOn": true,
-          "maxNumberOfProblems": 10,
-          "completionSnippetsOn": false
+          "maxNumberOfProblems": 20
         }
       }
     }
   }
 }
+

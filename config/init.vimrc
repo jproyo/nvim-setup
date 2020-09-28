@@ -41,6 +41,7 @@ Plug 'vim-latex/vim-latex'
 Plug 'sbdchd/neoformat'
 Plug 'vim-scripts/dbext.vim'
 Plug 'JamshedVesuna/vim-markdown-preview'
+Plug 'sdiehl/vim-ormolu'
 
 call plug#end()
 
