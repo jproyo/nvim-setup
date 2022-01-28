@@ -3,19 +3,19 @@ let mapleader=','
 
 " In the quickfix window, <CR> is used to jump to the error under the
 " cursor, so undefine the mapping there.
-autocmd BufReadPost quickfix nnoremap <buffer> <CR> <CR>
+" autocmd BufReadPost quickfix nnoremap <buffer> <CR> <CR>
 
 " Override default behaviour.
 "nnoremap o o<Esc>
 "nnoremap O O<Esc>
 
 ":nnoremap ff :vimgrep <cword> **/*.scala<CR>
-:nnoremap ff :vimgrep <cword> **/*.hs<CR>
-:nnoremap <leader>ff :vimgrep <cword> **/*.sql<CR>
+:nnoremap ff :vimgrep <cword> **/*.*<CR>
+":nnoremap <leader>ff :vimgrep <cword> **/*.sql<CR>
 
 " Git
-:nnoremap gf :G<CR>
-:nnoremap gv :Gvdiff<CR>
+":nnoremap gf :G<CR>
+":nnoremap gv :Gvdiff<CR>
 
 " Quit
 :nnoremap qq :q<CR>
@@ -84,9 +84,11 @@ xmap ga <Plug>(EasyAlign)
 nmap ga <Plug>(EasyAlign)
 
 "    Nerdtree
-map <C-p> :NERDTreeToggle<CR>
+map <C-n> :NERDTreeToggle<CR>
 map <C-S> :NERDTreeFind<CR>
 map <C-c> :NERDTreeRefreshRoot<CR>
+
+let NERDTreeShowHidden=1 " Show hidden files in NerdTree buffer.
 
 " Toggle display of tabs and EOF
 nnoremap <leader>l :set list!<CR>
@@ -111,6 +113,7 @@ inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
 " Use `[c` and `]c` for navigate diagnostics
 nmap <silent> [c <Plug>(coc-diagnostic-prev)
 nmap <silent> ]c <Plug>(coc-diagnostic-next)
+nmap <leader>f  <Plug>(coc-format)
 
 " Remap keys for gotos
 nmap <silent> gd <Plug>(coc-definition)
@@ -212,4 +215,15 @@ nnoremap <leader>o :only<CR>
 
 nnoremap <leader>su viw<esc>a)<esc>hbi(<esc>lel
 
+" Code action on <leader>a
+vmap <leader>a <Plug>(coc-codeaction-selected)<CR>
+nmap <leader>a <Plug>(coc-codeaction-selected)<CR>
+
+" Format action on <leader>f
+vmap <leader>f  <Plug>(coc-format-selected)
+nmap <leader>f  <Plug>(coc-format-selected)
+" Goto definition
+nmap <silent> gd <Plug>(coc-definition)
+" Open definition in a split window
+nmap <silent> gv :vsp<CR><Plug>(coc-definition)<C-W>L
 

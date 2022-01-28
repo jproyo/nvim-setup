@@ -39,6 +39,7 @@ let g:NERDTreeDirArrows = 1
 let g:NERDTreeShowHidden = 1
 
 let g:NERDTreeGitStatusEnable = 1
+let NERDTreeStatusLine='NERDTree'
 
 " Rainbow brackets
 let g:rainbow_active = 1
@@ -134,4 +135,21 @@ let g:syntastic_mode_map = { "mode": "active", "passive_filetypes": ["haskell", 
 
 " Pointfree Configuration (:help pointfree)
 au BufNewFile,BufRead *.hs nmap pf <Plug>Pointfree
+
+let g:coc_global_extensions = [
+      \'coc-markdownlint',
+      \'coc-spell-checker',
+      \'coc-prettier',
+      \'coc-git',
+      \'coc-pyright',
+      \'coc-json',
+      \'coc-docker',
+      \'coc-yaml',
+      \'coc-highlight',
+      \'coc-vetur',
+      \'coc-python',
+      \'coc-explorer',
+      \'coc-flutter'
+      \]
+
 

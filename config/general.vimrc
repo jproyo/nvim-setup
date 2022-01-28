@@ -11,6 +11,7 @@ autocmd FileType json syntax match Comment +\/\/.\+$+
 " Better Unix support
 set viewoptions=folds,options,cursor,unix,slash
 set encoding=utf-8
+set fileencoding=utf-8
 
 function! TrimWhitespace()
     let l:save_cursor = getpos('.')
@@ -108,6 +109,23 @@ autocmd FileType latex,tex,md,markdown setlocal spell spelllang=en_us
 let vim_markdown_preview_github=1
 let vim_markdown_preview_hotkey='<C-m>'
 
-let g:neoformat_enabled_haskell = ['ormolu']
-let g:ormolu_options=["-o -XTypeApplications"]
+let g:neoformat_enabled_haskell = ['brittany']
+
+" open new split panes to right and below
+set splitright
+set splitbelow
+" turn terminal to normal mode with escape
+tnoremap <Esc> <C-\><C-n>
+" start terminal in insert mode
+au BufEnter * if &buftype == 'terminal' | :startinsert | endif
+" open terminal on ctrl+n
+function! OpenTerminal()
+  split term://zsh
+  resize 10
+endfunction
+
+nnoremap <C-t> :call OpenTerminal()<CR>
+
+let g:prettier#autoformat_config_present = 1
+let g:prettier#config#config_precedence = 'prefer-file'
 
