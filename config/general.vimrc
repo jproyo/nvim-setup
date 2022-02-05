@@ -6,7 +6,10 @@ filetype off                " required
 "autocmd VimEnter * edit ~/.config/nvim/keybindings.md
 
 " Highlighting for jsonc filetype
-autocmd FileType json syntax match Comment +\/\/.\+$+
+augroup Jsonsyntax
+  autocmd!
+  autocmd FileType json syntax match Comment +\/\/.\+$+
+augroup end
 
 " Better Unix support
 set viewoptions=folds,options,cursor,unix,slash
@@ -20,8 +23,12 @@ function! TrimWhitespace()
     call setpos('.', l:save_cursor)
 endfun
 
-command! TrimWhitespace call TrimWhitespace() " Trim whitespace with command
-autocmd BufWritePre * :call TrimWhitespace()  " Trim whitespace on every save
+"command! TrimWhitespace call TrimWhitespace() " Trim whitespace with command
+
+augroup trim_space
+  autocmd!
+  autocmd BufWritePre * :call TrimWhitespace()  " Trim whitespace on every save
+augroup end
 
 " Non-mapped function for tab toggles
 function! TabToggle()
@@ -102,14 +109,17 @@ let g:Tex_ViewRule_pdf = 'open -a Skim'
 let g:Tex_CompileRule_pdf =	'pdflatex -shell-escape -interaction=nonstopmode $*'
 let g:Tex_DefaultTargetFormat='pdf'
 let g:Tex_MultipleCompileFormats='pdf,bibtex,makeglossaries,pdf,pdf'
-let g:syntastic_tex_checkers = ['lacheck']
+"let g:syntastic_tex_checkers = ['lacheck']
 
-autocmd FileType latex,tex,md,markdown setlocal spell spelllang=en_us
+augroup Spell
+    autocmd!
+    autocmd FileType latex,tex,md,markdown setlocal spell spelllang=en_us
+augroup END
 
 let vim_markdown_preview_github=1
 let vim_markdown_preview_hotkey='<C-m>'
 
-let g:neoformat_enabled_haskell = ['brittany']
+let g:neoformat_enabled_haskell = ['sortimports', 'brittany']
 
 " open new split panes to right and below
 set splitright
@@ -117,7 +127,11 @@ set splitbelow
 " turn terminal to normal mode with escape
 tnoremap <Esc> <C-\><C-n>
 " start terminal in insert mode
-au BufEnter * if &buftype == 'terminal' | :startinsert | endif
+augroup terminalI
+  autocmd!
+  autocmd BufEnter * if &buftype == 'terminal' | :startinsert | endif
+augroup end
+
 " open terminal on ctrl+n
 function! OpenTerminal()
   split term://zsh

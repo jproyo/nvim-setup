@@ -84,7 +84,7 @@ xmap ga <Plug>(EasyAlign)
 nmap ga <Plug>(EasyAlign)
 
 "    Nerdtree
-map <C-n> :NERDTreeToggle<CR>
+map <C-p> :NERDTreeToggle<CR>
 map <C-S> :NERDTreeFind<CR>
 map <C-c> :NERDTreeRefreshRoot<CR>
 
@@ -130,7 +130,10 @@ nmap <leader>ac <Plug>(coc-codeaction)
 "nnoremap <silent> F :call CocAction('format')<CR>
 
 " Show signature help
-autocmd User CocJumpPlaceholder call CocActionAsync('showSignatureHelp')
+augroup signture
+  autocmd!
+  autocmd User CocJumpPlaceholder call CocActionAsync('showSignatureHelp')
+augroup end
 
 " Use K for show documentation in preview window
 nnoremap <silent> K :call <SID>show_documentation()<CR>
@@ -195,11 +198,10 @@ endfunction
 augroup haskellStylish
   au!
   " Just hindent
-  au FileType haskell nnoremap <silent>F :call RunOrmolu()<CR>
+  au FileType haskell nnoremap <silent>F :call HaskellFormat('both')<CR>
   " Just stylish-haskell
-  au FileType haskell nnoremap <silent>FS :call HaskellFormat('stylish')<CR>
+  au FileType haskell nnoremap <silent>FF :call HaskellFormat('stylish')<CR>
   " First hindent, then stylish-haskell
-  au FileType haskell nnoremap <silent>FF :call HaskellFormat('both')<CR>
 augroup END
 
 " Dash

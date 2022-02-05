@@ -5,8 +5,9 @@
 " Unfortunately silent means the errors look a little ugly, I suppose I could
 " capture those and print them out with echohl WarningMsg.
 augroup tags
-au BufWritePost *.hs            silent !~/.config/nvim/scripts/init-tags %
-au BufWritePost *.hsc           silent !~/.config/nvim/scripts/init-tags %
+  au!
+  au BufWritePost *.hs            silent !~/.config/nvim/scripts/init-tags %
+  au BufWritePost *.hsc           silent !~/.config/nvim/scripts/init-tags %
 augroup END
 
 " If you use qualified tags, then you have to change iskeyword to include

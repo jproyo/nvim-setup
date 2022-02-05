@@ -45,7 +45,10 @@ let NERDTreeStatusLine='NERDTree'
 let g:rainbow_active = 1
 
 " vim-scala
-au BufRead,BufNewFile *.sbt set filetype=scala
+augroup Scala
+  autocmd!
+  autocmd BufRead,BufNewFile *.sbt set filetype=scala
+augroup end
 
 " ------------------- COC config -----------------------
 
@@ -65,11 +68,11 @@ set nowritebackup
 " Better display for messages
 set cmdheight=2
 
-" Show signature help
-"autocmd User CocJumpPlaceholder call CocActionAsync('showSignatureHelp')
-
 " Highlight symbol under cursor on CursorHold
-"autocmd CursorHold * silent call CocActionAsync('highlight')
+augroup cursor_h
+    autocmd!
+    autocmd CursorHold * silent call CocActionAsync('highlight')
+augroup end
 
 " No preview window on autocompletion (vim-lsc)
 "set completeopt-=preview
@@ -112,8 +115,9 @@ let g:hindent_on_save    = 0
 
 " Create/Update tags on save file
 augroup tags
-au BufWritePost *.hs            silent !fast-tags -R . --nomerge
-au BufWritePost *.hsc           silent !fast-tags -R . --nomerge
+    autocmd!
+    autocmd BufWritePost *.hs            silent !fast-tags -R . --nomerge
+    autocmd BufWritePost *.hsc           silent !fast-tags -R . --nomerge
 augroup END
 
 " Folding is disabled (https://github.com/plasticboy/vim-markdown#disable-folding)
@@ -122,19 +126,19 @@ let g:vim_markdown_folding_disabled = 1
 " Syntastic Configuration
 " A syntactic checker like hlint should be installed in your PATH
 " Run :SyntasticInfo to see what syntactic checkers are supported and enabled.
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
+"set statusline+=%#warningmsg#
+"set statusline+=%{SyntasticStatuslineFlag()}
+"set statusline+=%*
 
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 0 " closed on open, not displayed until the file is saved
-let g:syntastic_check_on_wq = 0
-" Ignore hs - annoying
-let g:syntastic_mode_map = { "mode": "active", "passive_filetypes": ["haskell", "hs"] }
+"let g:syntastic_always_populate_loc_list = 1
+"let g:syntastic_auto_loc_list = 1
+"let g:syntastic_check_on_open = 0 " closed on open, not displayed until the file is saved
+"let g:syntastic_check_on_wq = 0
+"" Ignore hs - annoying
+"let g:syntastic_mode_map = { "mode": "active", "passive_filetypes": ["haskell", "hs"] }
 
 " Pointfree Configuration (:help pointfree)
-au BufNewFile,BufRead *.hs nmap pf <Plug>Pointfree
+"au BufNewFile,BufRead *.hs nmap pf <Plug>Pointfree
 
 let g:coc_global_extensions = [
       \'coc-markdownlint',
