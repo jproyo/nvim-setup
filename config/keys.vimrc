@@ -186,22 +186,13 @@ imap <C-j> <Plug>(coc-snippets-expand-jump)
 
 " Hindent & Stylish-haskell
 function! HaskellFormat(which) abort
-  if a:which ==# 'neoformat' || a:which ==# 'both'
-    :Neoformat
-  endif
-  if a:which ==# 'stylish' || a:which ==# 'both'
-    silent! exe 'undojoin'
-    silent! exe 'keepjumps %!stylish-haskell'
-  endif
+  :Neoformat
 endfunction
 
 augroup haskellStylish
   au!
   " Just hindent
-  au FileType haskell nnoremap <silent>F :call HaskellFormat('both')<CR>
-  " Just stylish-haskell
-  au FileType haskell nnoremap <silent>FF :call HaskellFormat('stylish')<CR>
-  " First hindent, then stylish-haskell
+  au FileType haskell nnoremap <silent>F :Neoformat<CR>
 augroup END
 
 " Dash
